@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+venv/
+datasets/
+runs/
+work_dirs/
+weights/*.pth
+!checkpoints/*.pth
+*.log
+/wavecrack_mamba_R1a_code_20261022/wavecrack_mamba_R1a_code_20261022/projects/crack_baselines/
+/wavecrack_mamba_R1a_code_20261022/wavecrack_mamba_R1a_code_20261022/projects/wavecrack_mamba/scripts/

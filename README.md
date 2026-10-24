@@ -12,8 +12,8 @@ The implementation is in `wavecrack_mamba_R1a_code_20261022/wavecrack_mamba_R1a_
 
 | Dataset | Test images | Selected epoch | Test ODS | Test ODS threshold | Checkpoint |
 | --- | ---: | ---: | ---: | ---: | --- |
-| DeepCrack | 237 | 20 | 83.4413% | 0.543 | `checkpoints/deepcrack_best_val_ods_epoch_20.pth` |
-| Crack500 | 674 | 10 | 79.2586% | 0.751 | `checkpoints/crack500_best_val_ods_epoch_10.pth` |
+| DeepCrack | 237 | 20 | 83.4413% | 0.543 | [Download checkpoint](https://github.com/johncasdv/WaveCrackMamba/releases/latest/download/deepcrack_best_val_ods_epoch_20.pth) |
+| Crack500 | 674 | 10 | 79.2586% | 0.751 | [Download checkpoint](https://github.com/johncasdv/WaveCrackMamba/releases/latest/download/crack500_best_val_ods_epoch_10.pth) |
 
 Each checkpoint was selected using validation ODS. The test ODS threshold is computed on the corresponding test split as required by the reported ODS protocol. The reported values are benchmark results and do not constitute field deployment validation.
 
@@ -76,11 +76,13 @@ python training_deepcrack_crack500/evaluate_best.py \
 
 Use `--dataset crack500` for Crack500. A run writes its configuration, split hashes, and completion status in `run_manifest.json`.
 
+Download the two checkpoint files from the latest GitHub Release and place them in a local `checkpoints/` directory if you need them for inference or evaluation. The checkpoint files are attached to the release rather than stored in Git history.
+
 ## Repository contents
 
 - `training_deepcrack_crack500/`: training, evaluation, environment-check, and initialization-conversion scripts with dataset configs.
 - `wavecrack_mamba_R1a_code_20261022/`: model modules, dependencies specific to the project, and model tests.
-- `checkpoints/`: validation-selected DeepCrack and Crack500 PyTorch checkpoints.
+- GitHub Releases: validation-selected DeepCrack and Crack500 PyTorch checkpoints.
 
 No benchmark images or masks are redistributed here. Checkpoint files are provided for research reproducibility. Third-party software and datasets remain subject to their own licenses and terms.
 

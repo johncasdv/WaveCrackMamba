@@ -1,0 +1,23 @@
+"""Context-only Mamba + R1a; the data and head match the no-Mamba arm."""
+_base_ = ['../_base_/wcm_r1a_hardcrack_64ep.py']
+model = dict(
+    axial_mixer=dict(
+        _delete_=True,
+        type='AxialMambaMixer',
+        n_blocks=2,
+        block=dict(
+            d_model=96,
+            router_mode='context_only',
+            row_column_core_sharing=True,
+            alpha_init=0.1,
+            beta_init=0.1,
+            mlp_ratio=2.0,
+            core=dict(
+                type='AxialSSMCore',
+                d_model=96,
+                d_state=16,
+                d_conv=4,
+                expand=2,
+                backend='mamba'))))
+hardcrack_arm = 'm'
+work_dir = './work_dirs/wavecrack_mamba/hardcrack_r1a/m_64ep_seed42'

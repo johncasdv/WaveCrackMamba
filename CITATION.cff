@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the WaveCrackMamba paper when available."
+title: "WaveCrackMamba"
+version: 1.0.0
+date-released: 2026-10-25
+repository-code: "https://github.com/johncasdv/WaveCrackMamba"
+authors:
+  - name: "GaoYuan"
+    affiliation: "College of Electronic and Information Engineering, Tongji University, Shanghai 201800, China"
