@@ -12,6 +12,8 @@ HERE = Path(__file__).resolve().parent
 MODEL_ROOT = (HERE.parent / 'wavecrack_mamba_R1a_code_20261022'
               / 'wavecrack_mamba_R1a_code_20261022')
 DATASETS = ('deepcrack', 'crack500')
+EXPECTED_SPLITS = json.loads(
+    (HERE / 'split_audit.json').read_text(encoding='utf-8'))
 
 
 def sha256(path):
@@ -92,6 +94,10 @@ def main():
     cfg.train_dataloader.batch_size = args.microbatch
     cfg.optim_wrapper.accumulative_counts = args.accumulation
     data_audit = audit_data(data_root)
+    if data_audit != EXPECTED_SPLITS[args.dataset]:
+        raise ValueError(
+            f'{args.dataset} split counts or SHA-256 checksums do not match '
+            'the recorded experiment; see split_audit.json')
     weight_hash = sha256(args.pretrained)
     cfg.model.backbone.convnext.init_cfg = dict(
         type='Pretrained', checkpoint=str(args.pretrained.resolve()))

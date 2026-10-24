@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-from run_pair import HERE, MODEL_ROOT, audit_data
+from run_pair import HERE, MODEL_ROOT, EXPECTED_SPLITS, audit_data
 
 
 def main():
@@ -24,7 +24,10 @@ def main():
         raise ValueError('This run has not completed for the requested dataset')
     if manifest['initialization'] != 'imagenet':
         raise ValueError('Unexpected initialization in run manifest')
-    if manifest['splits'] != audit_data(data_root):
+    current_splits = audit_data(data_root)
+    if current_splits != EXPECTED_SPLITS[args.dataset]:
+        raise ValueError('Dataset split checksums do not match split_audit.json')
+    if manifest['splits'] != current_splits:
         raise ValueError('Dataset split checksums changed since training')
     checkpoints = list(run_dir.glob('best_val_ODS_epoch_*.pth'))
     if len(checkpoints) != 1:

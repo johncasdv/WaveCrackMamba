@@ -1,0 +1,12 @@
+{
+  "deepcrack": {
+    "train": {"images": 240, "index_sha256": "964f062508d002912ae085a7de3873dec0192aa4bd754bab67e7a7527446f0ea"},
+    "val": {"images": 60, "index_sha256": "50b3ec61154d7416d763bd826c1189f4f64c31d8a40e1552559d97b298e864b4"},
+    "test": {"images": 237, "index_sha256": "42e746cbd2f50a9bc46584ce1040cf6d6887d8f7bcf8642cb71e3ac1112c5401"}
+  },
+  "crack500": {
+    "train": {"images": 2357, "index_sha256": "73db922be0b34a959df0e6f94b6f6dae9805263865f7a5e54fcd94669e97eb79"},
+    "val": {"images": 337, "index_sha256": "e7d3db15aa337c6fc27e566ab3470d3eef4232edf9f1db556470a4af117cfd61"},
+    "test": {"images": 674, "index_sha256": "f226a49f826d17abe4f1a487359a2c03b0327babbab986edf94020270c002a72"}
+  }
+}

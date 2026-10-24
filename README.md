@@ -44,7 +44,7 @@ datasets/
     splits/test.txt
 ```
 
-Each split file contains one image path and one mask path per line, relative to that dataset directory. The expected split sizes are DeepCrack 240/60/237 and Crack500 2357/337/674 for train/validation/test. The scripts verify files, split disjointness, and split-index SHA-256 values before training. Dataset images, masks, and split files are not included in this repository.
+Each split file contains one image path and one mask path per line, relative to that dataset directory. The expected split sizes are DeepCrack 240/60/237 and Crack500 2357/337/674 for train/validation/test. The scripts verify files, split disjointness, expected split counts, and SHA-256 values before training. The reference counts and checksums are in `training_deepcrack_crack500/split_audit.json`; hashes are computed over each split text file's raw bytes. Dataset images, masks, and split files are not included in this repository.
 
 DeepCrack source: <https://github.com/yhlleo/DeepCrack>
 
