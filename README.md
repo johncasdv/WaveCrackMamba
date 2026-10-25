@@ -86,9 +86,13 @@ Download the two checkpoint files from the latest GitHub Release and place them 
 
 No benchmark images or masks are redistributed here. Checkpoint files are provided for research reproducibility. Third-party software and datasets remain subject to their own licenses and terms.
 
+The included DySample implementation is adapted from a third-party MIT-licensed
+project; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for its copyright
+and license notice. The reported R1a model uses fixed bilinear upsampling.
+
 ## License
 
-The author has not yet selected a software license. Until a `LICENSE` file is added, no license to reuse or redistribute this code is granted.
+The original WaveCrackMamba code in this repository is licensed under the MIT License; see [LICENSE](LICENSE). Third-party components retain their own license terms. In particular, the included DySample implementation is MIT-licensed separately; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Citation
 
