@@ -41,6 +41,9 @@ def _normal_init(module, mean=0, std=1, bias=0):
 class DySample(nn.Module):
     """Dynamic upsampling by content-aware point resampling.
 
+    Copyright (c) 2023 Wenze Liu. Licensed under the MIT License; see the
+    repository's THIRD_PARTY_NOTICES.md for the full license text.
+
     Vendored from https://github.com/tiny-smart/dysample (ICCV'23), the same
     copy SCSegamba ships (projects/SCSegamba/models/DySample.py) -- imported
     here rather than from that tree because its files use ``from models.X``
