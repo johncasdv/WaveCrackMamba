@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the WaveCrackMamba paper when available."
 title: "WaveCrackMamba"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-10-25
 repository-code: "https://github.com/johncasdv/WaveCrackMamba"
 authors:
